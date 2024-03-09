@@ -1,18 +1,16 @@
 
 
-import React, { useRef , useEffect } from "react";
+import  { useRef , useEffect } from "react";
 import { useGLTF } from "@react-three/drei";
-import { useFrame, useThree } from "@react-three/fiber";
+import {a} from '@react-spring/three'
+import { useFrame ,useThree } from "@react-three/fiber";
 
-import islandScene from '../assets/3d/island.glb';
-import {a} from '@react-three/drei'
+import islandScene from '../assets/3d/island.glb'
 
-
-const Island= (props) => {
-  const islandRef= useRef();
+const Island = (props) => {
   const { nodes, materials } = useGLTF(islandScene);
   return (
-    <a.group ref = {islandRef}{...props} >
+    <a.group {...props} dispose={null}>
       <mesh
         
         
@@ -58,7 +56,8 @@ const Island= (props) => {
     </a.group>
   );
 }
-
-
 export default Island;
+
+
+
 
