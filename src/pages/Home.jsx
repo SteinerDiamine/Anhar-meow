@@ -71,6 +71,7 @@ const Home = () => {
 
           <Bird/>
           <Sky isRotating={isRotating}/>
+
           <Island
            position={islandPosition}
            scale={islandScale}
