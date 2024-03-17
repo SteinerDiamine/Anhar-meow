@@ -513,6 +513,35 @@ const Island = ({ isRotating, setIsRotating,setCurrentStage, ...props }) => {
     e.stopPropagation();
     e.preventDefault();
 
+    const handleTouchStart =(e) => {
+      e.stopPropagation();
+      e.preventDefault();
+      setIsRotating(true);
+
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      lastX.current = clientX;
+    }
+
+    const handleTouchEnd =(e) => {
+      e.stopPropagation();
+      e.preventDefault();
+      setIsRotating(false);
+    }
+
+    const handleTouchMove =(e) => {
+      e.stopPropagation();
+      e.preventDefault();
+
+      if(isRotating){
+        const clientX =e.touches ?
+        e.touches[0].clientX : e.clientX;
+
+        const delta = (clientX-lastX.current)/viewport.width;
+        lastX.current= clientX;
+        rotationSpeed.current = delta* 0.01 * Math.PI
+
+    }
+
     if (isRotating) {
       const clientX = e.touches ? e.touches[0].clientX : e.clientX;
       const delta = (clientX - lastX.current) / viewport.width;
@@ -528,9 +557,11 @@ const Island = ({ isRotating, setIsRotating,setCurrentStage, ...props }) => {
     if (e.key === "ArrowLeft") {
       if (!isRotating) setIsRotating(true);
       islandRef.current.rotation.y += 0.01 * Math.PI;
+      rotationSpeed.current = 0.0125;
     } else if (e.key === "ArrowRight") {
       if (!isRotating) setIsRotating(true);
       islandRef.current.rotation.y -= 0.01 * Math.PI;
+      rotationSpeed.current = -0.0125;
     }
   };
 
@@ -584,6 +615,9 @@ const Island = ({ isRotating, setIsRotating,setCurrentStage, ...props }) => {
     canvas.addEventListener("pointerdown", handlePointerDown);
     canvas.addEventListener("pointerup", handlePointerUp);
     canvas.addEventListener("pointermove", handlePointerMove);
+    canvas.addEventListener("touchstart",handleTouchStart);
+    canvas.addEventListener("touchend",handleTouchEnd);
+    canvas.addEventListener("touchmove",handleTouchMove);
     document.addEventListener("keydown", handleKeyDown);
     document.addEventListener("keyup", handleKeyUp);
 
