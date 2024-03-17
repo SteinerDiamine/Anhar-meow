@@ -483,7 +483,7 @@ import { useFrame, useThree } from "@react-three/fiber";
 
 import islandScene from "../assets/3d/island.glb";
 
-const Island = ({ isRotating, setIsRotating,setCurrentStage, ...props }) => {
+const Island = ({ isRotating, setIsRotating, setCurrentStage, ...props }) => {
   const islandRef = useRef();
 
   const { gl, viewport } = useThree();
@@ -512,35 +512,6 @@ const Island = ({ isRotating, setIsRotating,setCurrentStage, ...props }) => {
   const handlePointerMove = (e) => {
     e.stopPropagation();
     e.preventDefault();
-
-    const handleTouchStart =(e) => {
-      e.stopPropagation();
-      e.preventDefault();
-      setIsRotating(true);
-
-      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
-      lastX.current = clientX;
-    }
-
-    const handleTouchEnd =(e) => {
-      e.stopPropagation();
-      e.preventDefault();
-      setIsRotating(false);
-    }
-
-    const handleTouchMove =(e) => {
-      e.stopPropagation();
-      e.preventDefault();
-
-      if(isRotating){
-        const clientX =e.touches ?
-        e.touches[0].clientX : e.clientX;
-
-        const delta = (clientX-lastX.current)/viewport.width;
-        lastX.current= clientX;
-        rotationSpeed.current = delta* 0.01 * Math.PI
-
-    }
 
     if (isRotating) {
       const clientX = e.touches ? e.touches[0].clientX : e.clientX;
@@ -571,7 +542,7 @@ const Island = ({ isRotating, setIsRotating,setCurrentStage, ...props }) => {
     }
   };
 
- useFrame(() => {
+  useFrame(() => {
     if (!isRotating) {
       rotationSpeed.current *= dampingFactor;
 
@@ -604,20 +575,13 @@ const Island = ({ isRotating, setIsRotating,setCurrentStage, ...props }) => {
           setCurrentStage(null);
       }
     }
-  }); 
-
-
-  
-  
+  });
 
   useEffect(() => {
     const canvas = gl.domElement;
     canvas.addEventListener("pointerdown", handlePointerDown);
     canvas.addEventListener("pointerup", handlePointerUp);
     canvas.addEventListener("pointermove", handlePointerMove);
-    canvas.addEventListener("touchstart",handleTouchStart);
-    canvas.addEventListener("touchend",handleTouchEnd);
-    canvas.addEventListener("touchmove",handleTouchMove);
     document.addEventListener("keydown", handleKeyDown);
     document.addEventListener("keyup", handleKeyUp);
 
@@ -672,4 +636,5 @@ const Island = ({ isRotating, setIsRotating,setCurrentStage, ...props }) => {
     </a.group>
   );
 };
-export default Island;  
+
+export default Island;
