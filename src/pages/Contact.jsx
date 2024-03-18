@@ -1,4 +1,4 @@
-import emailjs from '@emailjs/browser'
+/*import emailjs from '@emailjs/browser'
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useRef, useState } from "react";
 
@@ -156,9 +156,9 @@ const Contact = () => {
   );
 };
 
-export default Contact; 
+export default Contact; */
 
-/* import React, { Suspense, useRef, useState } from 'react'
+import React, { Suspense, useRef, useState } from 'react'
 import  emailjs from '@emailjs/browser';
 import { Canvas } from '@react-three/fiber';
 import Fox from '../models/Fox';
@@ -317,6 +317,6 @@ const Contact = () => {
   )
 }
 
-export default Contact  */
+export default Contact  
 
 
