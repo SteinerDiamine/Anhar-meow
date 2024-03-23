@@ -191,8 +191,8 @@ const Contact = () => {
     setCurrentAnimations('hit')
 
     emailjs.send(
-     import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-     import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+      'service_bktojts',
+      'template_0gbwcoi',
        {
         from_name: form.name,
         to_name:"Meow",
@@ -200,7 +200,7 @@ const Contact = () => {
         to_email: 'ttweety309@gmail.com',
         message: form.message
        },
-       import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+       'uePtMJcufFH37I4e0'
 
     ).then(() => {
       setIsLoading(false);
