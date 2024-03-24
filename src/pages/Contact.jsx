@@ -280,7 +280,7 @@ const Contact = () => {
               type='email'
               name='email'
               className='input'
-              placeholder='meow@gmail.com'
+              placeholder='diamine@gmail.com'
               required
               value={form.email}
               onChange={handleChange}

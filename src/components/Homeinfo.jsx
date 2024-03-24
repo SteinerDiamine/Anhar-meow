@@ -1,59 +1,4 @@
-/*import React from 'react'
-import { Link } from 'react-router-dom'
-import {arrow} from '../assets/icons'
 
-const InfoBox = ({text , link, btnText}) => (
-    <div className='info-box'>
-        <p className='font-medium sm:xl text-center'>{text}</p>
-        <Link to= {Link} className='neo-brutalism-white neo-btn'>
-            {btnText}
-            <img src = {arrow} className='w-4 h-4 object-contain'/>
-        </Link>
-    </div>
-)
-
-
-const renderContent = {
-    1: (
-        <h1 className='sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5'>
-            Hi, I am <span className='font-semibold'>Anhar</span>  ฅ^•ﻌ•^ฅ
-            <br/>
-            Currently Learning and Trying new stuff 
-        </h1>
-    ),
-
-    2: (
-        <InfoBox
-        text ="Currently pursuing Bachelor's Degree"
-        link= "/about"
-        btnText="Learn more"/>
-    ),
-
-    3: (
-        <InfoBox
-        text ="I like Painting 🎨"
-        link= "/projects"
-        btnText="Visit my portfolio"/> 
-    ),
-
-    4: (
-        <InfoBox
-        text ="Reach me for more info"
-        link= "/contact"
-        btnText="Let's talk"/>
-    ),
-
-}
-
-
-
-const Homeinfo = ({currentStage}) => {
-  return renderContent[currentStage] || null;
-    
-  
-}
-
-export default Homeinfo */
 
 
 
@@ -66,12 +11,12 @@ const HomeInfo = ({ currentStage }) => {
     return (
       <h1 className='sm:text-xl sm:leading-snug text-center neo-brutalism-blue py-4 px-8 text-white mx-5'>
         Hi, I'm
-        <span className='font-semibold mx-2 text-white'>Anhar</span>
-        ฅ^•ﻌ•^ฅ
+        <span className='font-semibold mx-2 text-white'>Shubham</span>
+        👋
         
         <br />
         <br/>
-        Looking forward to learn new things📚
+        Always looking forward with hope and optimism
 
       </h1>
     );
