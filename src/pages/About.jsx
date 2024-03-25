@@ -18,7 +18,7 @@ const About = () => {
     <p>Transcending the stars with dreams and optimism...</p>
     <p>The childish wisdom with the quality of Sage,</p>
     <p>Listening to songs that have yet been unknown to heart....</p>
-</div>
+    </div>
 
 
 
