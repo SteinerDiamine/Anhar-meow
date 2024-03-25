@@ -1,5 +1,5 @@
 import React from 'react';
-import photo from '../Image/photo.jpeg'; // Importing the image
+import photo from '../Image/zen.avif'; // Importing the image
 import { skills } from '../Constants';
 
 const About = () => {
