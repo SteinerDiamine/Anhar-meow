@@ -1,1 +1,2 @@
-My portfolio 😼: https://myportfoliodiamine.netlify.app/about
+My portfolio 😼: 
+https://myportfoliodiamine.netlify.app/
