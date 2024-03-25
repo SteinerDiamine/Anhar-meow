@@ -21,6 +21,7 @@ const About = () => {
 </div>
 
 
+
         
       </div>
       <div className='py-10 flex flex-col'>
