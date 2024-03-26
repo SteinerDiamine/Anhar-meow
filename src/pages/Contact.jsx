@@ -204,16 +204,16 @@ const Contact = () => {
 
     emailjs
       .send(
-        'service_bktojts',
-        'template_0gbwcoi',
+        'service_l0qtua9',
+        'template_schwb7s',
         {
           from_name: form.name,
-          to_name: "JavaScript Mastery",
+          to_name: "Shubham",
           from_email: form.email,
-          to_email: "ttweety309@gmail.com",
+          to_email: "shubhamsharma68663@gmail.com",
           message: form.message,
         },
-        'uePtMJcufFH37I4e0'
+        'xiLQflO0NKynNjhCH'
       )
       .then(
         () => {
