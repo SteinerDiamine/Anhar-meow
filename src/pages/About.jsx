@@ -19,6 +19,14 @@ const About = () => {
     <p>The childish wisdom with the quality of Sage,</p>
     <p>Listening to songs that have yet been unknown to heart....</p>
     </div>
+    <div className='py-10 flex flex-col'>
+            <h3 className='subhead-text '>A little Introduction</h3>
+            <div >
+              <p>I am Bachelor student who is interested in programming , Passionate problem-solver crafting innovative solutions through code.
+              "I'm a versatile programmer proficient in both backend and frontend development, adept at crafting efficient and user-friendly digital experiences."
+              </p>
+            </div>
+          </div>
 
 
 
@@ -38,7 +46,10 @@ const About = () => {
                 
                 
               </div>
+              
             </div>
+           
+            
           )) }
         </div>
       </div>
