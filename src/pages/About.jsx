@@ -1,12 +1,14 @@
 import React from 'react';
-import photo from '../Image/zen.avif'; // Importing the image
+import photo from '../Image/zen.avif'; 
 import { skills } from '../Constants';
 
 const About = () => {
   return (
+
+ 
     <section className='max-container'>
       <img src={photo} alt='Description of the image'
-      /> {/* Using the imported image */}
+      /> 
       <h1 className='head-text'>
         Hello, I'm <span className='blue-gradient_text font-semibold drop-shawdow'>Shubham Sharma</span>
       </h1>
@@ -37,7 +39,7 @@ const About = () => {
         <div className='mt-16 flex flex-wrap gap-12'>
           {skills.map((skill) =>(
             <div className='block-container w-20 h-20'>
-              <div className='btn-font rounded-xl flex justify-center items-center ' />
+              <div className='btn-back rounded-xl flex justify-center items-center ' />
               <div className='btn-front rounded-xl flex justify-center items-center' style={{ backgroundColor: 'transparent' }}>
                 <img 
                 src={skill.imageUrl}
