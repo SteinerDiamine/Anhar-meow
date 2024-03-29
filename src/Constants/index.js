@@ -1,4 +1,6 @@
 import { meta, shopify, starbucks, tesla } from "../assets/images";
+import javaIcon from "../assets/icons/java.svg";
+
 import {
     car,
     contact,
@@ -23,7 +25,8 @@ import {
     summiz,
     tailwindcss,
     threads,
-    typescript
+    typescript,
+    
 } from "../assets/icons";
 
 export const skills = [
@@ -32,6 +35,14 @@ export const skills = [
         name: "CSS",
         type: "Frontend",
     },
+    
+        {
+            imageUrl: javaIcon,
+            name: "Java",
+            type: "Backend",
+        }
+        
+    ,
     
     {
         imageUrl: git,
@@ -70,11 +81,7 @@ export const skills = [
         name: "Tailwind CSS",
         type: "Frontend",
     },
-    {
-        imageUrl: typescript,
-        name: "TypeScript",
-        type: "Frontend",
-    }
+   
 ];
 
 export const experiences = [
