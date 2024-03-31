@@ -28,6 +28,8 @@ note : This is my personal project don't misuse it, you can only use it for lear
 Deployment is done in one of the popular website Netlify
 
 ```bash
-https://myportfoliodiamine.netlify.app/
+https://myportfoliodiamine.netl![Screenshot from 2024-04-01 04-39-54](https://github.com/SteinerDiamine/SD-Portfolio/assets/160833423/15c8f7dd-24c8-4feb-b661-4621ca774836)
+ify.app/
 ```
 
+![Screenshot of My portfolio](https://github.com/SteinerDiamine/SD-Portfolio/assets/160833423/dc22313e-5326-4624-af5e-4a93dd6e3bae)
