@@ -1,6 +1,9 @@
 import React from 'react';
 import photo from '../Image/zen.avif'; 
-import { skills } from '../Constants';
+import { skills,experiences } from '../Constants';
+
+import {VerticalTimeline,VerticalTimelineElement,} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
 
 const About = () => {
   return (
@@ -55,8 +58,35 @@ const About = () => {
           )) }
         </div>
       </div>
+      <div className='py-16'>
+        <h3 className='subhead-text'>Work Experience</h3> 
+        <div className='mt-5 flex flex-col gap-3 text-slate-500'>
+          <p>
+            Currently working with Java , Svelete and Spring framework and building projects ,leveling up my skills and exploring new stuff in the vast field of programming 
+          </p>
+        </div>
+        <div className='mt-12 flex'>
+          <VerticalTimeline>
+            {experiences.map((experience) => (
+              <VerticalTimelineElement>
+                <div>
+                  <h3>
+                    {experience.title}
+                  </h3>
+                </div>
+              </VerticalTimelineElement>
+            )
+
+            )}
+          
+              
+          </VerticalTimeline>
+        </div>
+
+      </div>
     </section>
   );
 };
 
-export default About;
+export default About; 
+

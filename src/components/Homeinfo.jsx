@@ -40,7 +40,7 @@ const HomeInfo = ({ currentStage }) => {
     return (
       <div className='info-box'>
         <p className='font-medium text-center sm:text-xl'>
-          I like painting 🎨
+          Like to learn new things 
         </p>
 
         <Link to='/projects' className='neo-brutalism-white neo-btn'>

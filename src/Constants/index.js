@@ -86,7 +86,7 @@ export const skills = [
 
 export const experiences = [
     {
-        title: "React.js Developer",
+        title: "Java  Developer",
         company_name: "Starbucks",
         icon: starbucks,
         iconBg: "#accbe1",
